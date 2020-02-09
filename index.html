@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+  	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Clique Visualizer</title>
+		<style> body {padding: 0; margin: 0;} </style>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/css/style.css">
+    <link rel="stylesheet" href="lib/css/float.css">
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.12/bootstrap-native-v4.min.js"></script>
+    <script type="text/javascript" src="lib/js/p5/p5.min.js"></script>
+		<script type="text/javascript" src="lib/js/p5/addons/p5.dom.min.js"></script>
+		<script type="text/javascript" src="lib/js/p5/addons/p5.sound.min.js"></script>
+    <script type="text/javascript" src="lib/js/visualizer/geomath.js"></script>
+    <script type="text/javascript" src="lib/js/visualizer/config.js"></script>
+    <script type="text/javascript" src="lib/js/visualizer/main.js"></script>
+    <script type="text/javascript" src="lib/js/visualizer/actions.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  	</head>
+	<body bgcolor="#2f4f4e" oncontextmenu="return false;">
+    <div class="container overlay-container col-md-2" onclick="event.stopPropagation()">
+      <div class="col-md-12 overlay">
+  			<form>
+  				<div class="form-check">
+  					<label>
+  						<input type="checkbox" name="check" value="grid" onclick="dispatchAction(event)"> <span class="label-text">Grid</span>
+  					</label>
+  				</div>
+          <div class="form-check">
+  					<label>
+  						<input type="checkbox" name="check" value="pca" onclick="dispatchAction(event)"> <span class="label-text">PCA</span>
+  					</label>
+  				</div>
+          <div class="form-check">
+  					<label>
+  						<input type="checkbox" name="check" value="mca" onclick="dispatchAction(event)"> <span class="label-text">MCA</span>
+  					</label>
+  				</div>
+          <div class="form-check">
+  					<label>
+  						<input type="checkbox" name="check" value="regression" onclick="dispatchAction(event)"> <span class="label-text">Regression</span>
+  					</label>
+  				</div>
+  			</form>
+  		</div>
+    </div>
+    <div id="cliqueholder"></div>
+	</body>
+</html>

@@ -8,7 +8,7 @@ function setup()
 function draw()
 {
 	cliqueVis.setBackground()
-  cliqueVis.drawPoints()
+	cliqueVis.drawPoints()
 	cliqueVis.drawAddons()
 	cliqueVis.showHUD()
 }
